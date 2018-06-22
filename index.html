@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Split Bill </title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--our CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--BootstrapJs-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+        <!--Font-awsome JS-->
+        <script defer;
+        src = "https://use.fontawesome.com/releases/v5.0.8/js/solid.js";
+        integrity = "sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l";
+        crossorigin = "anonymous" ></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
+            integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
+            crossorigin="anonymous"></script>
+
+
+</head>
+<body class="bg-img">
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbit/wordmark-7834e15cc74dbbfb529a4e56caaabe4f476d9334f21a34f6e7a24edbb8f30d88.png" id="logo" class="img-fluid">
+        </a>
+        <ul class="nav pull-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbit/avatars/50-31b0bb2f5aec77f11d60a1dc3fa14c23a958fed79261b32e94a73e9c27473ebb.png" alt="50">
+                    Animesh Kant
+
+
+                    <b class="caret"></b>
+                </a>
+
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="/account/settings">Your account</a></li>
+                    <li><a href="/groups/new">Create a group</a></li>
+                    <li><a href="/calculators">Fairness calculators</a></li>
+
+
+
+                    <li><a rel="nofollow" data-method="post" href="/logout">Log out</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<div class="container mt-4" id="cen_container">
+    <div class="con-cen" id="con-cen">
+        <div class="left_sidebar" id="left_sidebar">
+            <div class="viw_lnk">
+                <a href="#" id="dashboard_link" class="open"><span></span> Dashboard</a>
+            </div>
+        </div>
+        <div id="center_column">
+            <div class="dashboard header">
+                <nav class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <ul class="nav pull-right">
+                        <li>
+                            <a class="btn btn-info"data-toggle="modal" data-target="#addBill">Add Bill</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="clearfix">
+                <div id="dashboard_balances"><div style="padding: 10px 15px; position: relative; margin: 20px -15px">
+
+                    <img style="position: absolute; top: 0; left: 40px; width: 120px;" src="https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbit/person-2d59b69b3e7431884ebec1a55de75a4153a17c4050e6b50051ca90412e72cf96.png" alt="Person">
+                    <div style="text-align: left; padding-left: 175px; padding-top: 22px">
+                        <h3 style="font-size: 28px; line-height: 110%">
+                            Welcome to Splitwise!
+                        </h3>
+
+                        <div style="margin-top: 15px; color: #999; font-size: 18px; line-height: 24px">
+                            Splitwise helps you split bills with friends.
+                            <div style="height: 15px"></div>
+                            Click “Add a bill” above to get started, or invite some friends first!
+                        </div>
+
+                        <a data-toggle="modal" href="#invite_friends" class="btn btn-orange btn-large" style="margin-top: 18px; font-size: 18px">
+                            <i class="icon-plus" style="margin-right: 4px"></i><i class="icon-user icon-large" style="margin-right: 10px"></i>
+                            Add friends on Splitwise
+                        </a>
+                    </div>
+
+                </div>
+                </div>
+                <div id="recent_activity" style="display: none"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modals-->
+    <!-- Modal add bill-->
+    <div class="modal fade" id="addBill" tabindex="-1" role="dialog" aria-labelledby="addBill" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title" id="exampleModalLabel">Add a Bill</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mx-auto">
+                        <div class="col-6">
+                            <div class="row mx-auto">
+                                <div class="billAmtD">
+                                    <label for="billAmount">
+                                        Enter Total Bill Amount
+                                    </label>
+                                    <input class="form-control" name="billAmount" id="billAmt">
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    Rs <span id="billVal"/><span> per person</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Paid by you and split equally​.</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="mx-auto">
+                                <div class="row mx-auto">
+                                    <div class="col-9">Add Friends</div>
+                                    <div class="col-3">
+                                        <a class="btn btn-warning btn-sm" id="addFrnd">
+                                            <span style="font-size: 1em;color: #ffffff;font-weight: 600">+</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row mx-auto">
+                                    <ul class="list-group" id="add_fields"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="sav">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Our Script-->
+<script src="js/script.js"></script>
+</body>
+</html>
